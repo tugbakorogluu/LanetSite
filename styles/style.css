@@ -183,32 +183,6 @@ section {
     margin-bottom: 0.5rem;
 }
 
-.alt_m {
-    font-size: 1rem; 
-    position: fixed;
-    bottom: 0;
-    left: 50%; 
-    transform: translateX(-50%); 
-    color: black; 
-    border-radius: 5px; 
-    font-weight: bold; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    width: 100%; 
-    text-align: center; 
-    padding: 10px 0;
-    box-sizing: border-box; 
-  
-    z-index: 1000;
-}
-
-.alt_m_logo {
-    width: 10vw; /* Dinamik genişlik */
-    max-width: 50px; /* Maksimum genişlik sınırı */
-    height: auto;
-    margin-right: 10px;
-}
 
 
 
