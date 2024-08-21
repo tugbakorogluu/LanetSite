@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color: rgba(219, 223, 7, 0.788);
+    --border-color: rgba(255, 255, 255, 0.3);
+    --header-height: 80px;
+    --box-bg-color: #fff;
+    --box-text-color: #000;
+    --box-radius: 1.5rem;
+    --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: var(--header-height);
+    scroll-behavior: smooth;
+        transform: scale(1); /* Ölçeklendirme olmaması için varsayılan */
+    transform-origin: top left; /* Üstten başlar */
+}
+
+body {
+    background-color: rgba(219, 223, 7, 0.788); /* Yellow background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 3.5rem 2%;
+}
+
+.header {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border-bottom: var(--border-color);
+    height: var(--header-height);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo img {
+    height: 80px;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.header .navbar a {
+    margin: 0 1.5rem;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.header .faq-icon {
+    margin-left: 0; 
+    width: 50px;
+    height: 40px;
+    transform: translateX(-10px); 
+}
+
+.durak_baslik {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    height: 8rem;
+    font-size: 15px;
+    justify-content: space-between; 
+    flex-wrap: wrap; /* Taşma durumunda içeriği alt satıra geçmeye zorlar */
+}
+
+.stop_name {
+    font-weight: normal;
+    text-align: left;
+    flex-grow: 1;
+    margin-left: 10px; 
+    white-space: nowrap; /* Metnin satır atlamasını önler */
+    overflow: hidden; /* Taşan metni gizler */
+    text-overflow: ellipsis; /* Taşan metnin sonuna "..." ekler */
+}
+
+.stop_name span {
+    font-weight: 300;
+    text-align: left;
+    display: inline-block;
+    max-width: 100%; /* Taşmayı önlemek için genişliği sınırladık */
+}
+
+.search_icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.durak-select {
+    display: none; 
+    width: 50%;
+    margin-top: 1rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+
+.durak .box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0rem;
+     padding: 5rem;
+    padding-left: 15rem;
+    padding-right: 15rem; /* Sağ ve sol boşluk için padding ekledim */
+   
+}
+
+.durak .box {
+    position: relative; /* Corner image'ler için referans noktası oluşturur */
+    background-color: var(--box-bg-color);
+    color: var(--box-text-color);
+    padding: 4rem;
+    border-radius: var(--box-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    height: 350px;
+    width: 90%; 
+    
+  
+ /* Set a fixed height, adjust as needed */
+}
+
+.durak .box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+/* Corner Images */
+.durak .box .corner-image {
+    position: absolute;
+    width: 40px; /* Adjust the size as needed */
+    height: 30px;
+    z-index: 1; /* Üstte görünmelerini sağlar */
+}
+
+.durak .box .corner-image.top-left {
+    bottom: 10px; /* Alt konumunu ayarlayın */
+    left: 10px; /* Sol konumunu ayarlayın */
+}
+
+.durak .box .corner-image.top-right {
+    bottom: 10px; /* Alt konumunu ayarlayın */
+    right: 10px; /* Sağ konumunu ayarlayın */
+}
+
+
+
+.durak .box h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.durak .box p {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.alt_m {
+    font-size: 1rem; 
+    position: fixed;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: black; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    text-align: center; 
+    padding: 10px 0;
+    box-sizing: border-box; 
+  
+    z-index: 1000;
+}
+
+.alt_m_logo {
+    width: 10vw; /* Dinamik genişlik */
+    max-width: 50px; /* Maksimum genişlik sınırı */
+    height: auto;
+    margin-right: 10px;
+}
+
+.alt_m {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+
+    z-index: 1000;
+}
+
+.alt_m_logo {
+    width: 10vw; /* Dinamik genişlik */
+    max-width: 50px; /* Maksimum genişlik sınırı */
+    height: auto;
+    margin-right: 10px;
+}
+
+
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .durak .box-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .durak .box {
+        height: auto; /* Allow the height to adjust based on content */
+    }
+
+    .header .navbar a {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header .logo img {
+        height: 60px;
+    }
+
+    .header .navbar a {
+        margin: 0 1rem;
+        font-size: 1.4rem;
+    }
+
+    .durak .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .durak .box {
+        padding: 1.5rem;
+    }
+
+    .durak .box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .durak .box h2 {
+        font-size: 1.8rem;
+    }
+
+    .durak .box p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mevcut CSS kodlarınız burada kalıyor */
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .durak .box-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .durak .box {
+        height: auto; /* Allow the height to adjust based on content */
+    }
+
+    .header .navbar a {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header .logo img {
+        height: 60px;
+    }
+
+    .header .navbar a {
+        margin: 0 1rem;
+        font-size: 1.4rem;
+    }
+
+    .durak .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .durak .box {
+        padding: 1.5rem;
+        height: auto; /* Kutunun yüksekliği içeriğe göre ayarlansın */
+    }
+
+    .durak .box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .durak .box h2 {
+        font-size: 1.8rem;
+    }
+
+    .durak .box p {
+        font-size: 1.2rem;
+    }
+
+    /* Icon boyutlarını ayarlıyoruz */
+    .durak .box .corner-image {
+        width: 30px; /* Küçük ekranlarda icon boyutu küçültüldü */
+        height: 25px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 45%;
+    }
+
+    .header .logo img {
+        height: 50px;
+    }
+
+    .header .navbar a {
+        font-size: 1.2rem;
+    }
+
+    .durak_baslik {
+        font-size: 1.2rem;
+    }
+
+    .durak .box {
+        padding: 1rem;
+        height: auto; /* Kutunun yüksekliği içeriğe göre ayarlansın */
+    }
+
+    .durak .box img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .durak .box h2 {
+        font-size: 1.6rem;
+    }
+
+    .durak .box p {
+        font-size: 1rem;
+    }
+
+    /* Icon boyutlarını ve konumlandırmasını ayarlıyoruz */
+    .durak .box .corner-image {
+        width: 25px; /* Daha küçük ekranlarda icon boyutu daha da küçültüldü */
+        height: 20px;
+        top: auto; /* Eğer iconlar üstte taşmışsa, aşağıya kaydırabiliriz */
+        bottom: 10px; /* İkonları kutunun altına yaklaştırıyoruz */
+    }
+}
+@media (max-width: 280px) {
+
+    .durak_baslik {
+        font-size: 2px; /* Yazı boyutunu küçülttük */
+        padding: 0.8rem; /* Kenar boşluklarını azalttık */
+        height: 10rem; /* Yüksekliği biraz düşürdük */
+    }
+
+    .stop_name {
+        margin-left: 5px; /* Sol boşluğu azalttık */
+    }
+
+    .search_icon {
+        width: 10px; /* İkonun boyutunu küçülttük */
+        height: 10px;
+    }
+}
+
+
+/*!@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color: rgba(219, 223, 7, 0.788);
+    --color-2: rgba(19, 18, 18, 0);
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    --button-color: rgba(0, 0, 0, 0.8);
+    --button-text-color: #fff;
+    --button-radius: 2rem;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+section {
+    padding: 3.5rem 2%;
+}
+
+.logo img {
+    width: 7rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2.2rem;
+    border-radius: 30rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: black;
+}
+
+/*! header start */
+
+/*.header {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar a {
+    justify-content: center;
+    margin: 0 3rem;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.8)
+}
+
+.header .logo img {
+    height: 5rem;
+}
+
+.header .logo {
+    position: absolute;
+    left: 10px;
+}
+
+/*! header end */
+
+/*! Durak  start */
+
+/*.durak .durak_baslik {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 3.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.durak .durak_baslik img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+}
+
+.durak .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.durak .box-container .box {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.durak .box-container .box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.durak .box-container .box .bus_info {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.durak .box-container .box .bus_info span {
+    color: green;
+}
+
+/* Button container for info and location buttons */
+/*.durak .box-container .box .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+/* Info button styling */
+/*.durak .box-container .box .button-container .info-btn {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--button-radius);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Location button styling */
+/*.durak .box-container .box .button-container .location-btn {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--button-radius);
+    font-size: 1.2rem;
+    cursor: pointer;
+} 
+/*
+
+/*! Durak  end */
+
+
+/*! Durak  end*/
+
+/*! Home start*/
+
+/*
+.home{
+
+    margin: 2rem 7%;
+    min-height: 100vh;
+    padding: 2%;
+}
+
+.home .main{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;  
+}
+
+.home .main .r_side img{
+
+    height: 700px;
+}
+
+.home .main .content{
+
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.alt_m{
+
+    text-align: center;
+}
+
+.home .main .content h3{
+    font-size: 30px;
+}
+
+
+/*
+
+
+
+
+
+/*
+.home{
+    margin: 2rem 7%;
+    min-height: 100vh;
+    padding: 2%;
+}
+
+.home .main{
+                            
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+
+}
+
+.home .main .content{
+    max-width: 60rem;
+}
+
+.home .main .content h3{
+    font-size: 6rem;
+}
+
+.home .main .content p{
+    font-size: large;
+}
+
+.home .content{
+
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.home .main .content img{
+
+    width: 80%;
+
+}
+
+.home .main .r_side img{
+    height: 700px;
+}
+
+
+.alt_m{
+    text-align: center;
+}
+
+/*
+
+

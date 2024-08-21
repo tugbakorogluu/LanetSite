@@ -1,0 +1,166 @@
+/* General Layout */
+body {
+    background-color: rgba(219, 223, 7, 0.788); /* Yellow background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sub-header */
+.sub-header {
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 2rem;
+    border-radius: var(--box-radius);
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center; 
+    position: relative; /* Göreceli konumlandırma */
+}
+
+.sub-header img {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    right: 50px; /* En sağ tarafa yerleştirmek için */
+    top: -15px; /* Biraz aşağı indirmek için */
+    transform: translateY(50%); /* Resmi daha da aşağıya çekmek için translate kullanımı */
+}
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Cards */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    padding: 15px;
+    flex: 1 1 250px;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.card .info {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.card .info div {
+    flex: 1;
+    text-align: center;
+}
+
+/* Adjusting headers alignment */
+.card .info:first-of-type div {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* Detaylı Bilgi Butonu */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 1024px) {
+
+    .cards-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .sub-header {
+        font-size: 12px;
+    }
+
+    .sub-header img {
+        width: 3rem;
+        height: 3rem;
+        top: 100px;
+        right: 30px;
+    }
+
+    .card {
+        max-width: 200px;
+        padding: 10px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card .info {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 690px) {
+    .sub-header {
+        flex-direction: column; /* Ekran küçük olduğunda yazı ve görsel alt alta gelir */
+        height: auto; /* Yüksekliği otomatik yapar */
+        padding: 10px; /* Daha küçük padding */
+    }
+
+    .sub-header img {
+        position: static; /* Mutlak konumlandırmayı kaldırır */
+        margin-top: 10px; /* Görseli metnin altına alır */
+        transform: none; /* Görseli aşağıya çekmeyi kaldırır */
+        width: 3rem; /* Daha küçük ekranlar için görselin boyutunu küçültür */
+        height: 3rem;
+    }
+
+    .sub-header p {
+        margin: 0; /* Metin ve görsel arasındaki boşluğu kaldırır */
+    }
+}
+

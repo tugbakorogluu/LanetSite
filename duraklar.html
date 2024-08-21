@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" type="image/png" href="dosya.png"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+
+  <!-- Font Awesome Icons Lib-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>INTELIVISION</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/res.css">
+  <link rel="stylesheet" href="styles/duraklar.css"> 
+  <link rel="stylesheet" href="styles/home_style.css">
+
+  
+</head>
+
+<body>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBV1Z1CkBLayQxNQyZYkmxO0g73SLTcp-g",
+      authDomain: "mcadamdir.firebaseapp.com",
+      databaseURL: "https://mcadamdir-default-rtdb.firebaseio.com",
+      projectId: "mcadamdir",
+      storageBucket: "mcadamdir.appspot.com",
+      messagingSenderId: "121723881895",
+      appId: "1:121723881895:web:232d71b766410ee7494e82"
+    };
+  </script>
+  <!--! header section start  -->
+  <header class="header">
+
+    <a href="#home" class="logo">
+      <img src="images/koltuk.png" alt="logo">
+    </a>
+
+    <nav class="navbar">
+
+      <a href="index.html">Ana Sayfa</a>
+      <a href="araclar.html">Araçlar</a>
+      <a href="duraklar.html">Duraklar</a>
+
+    </nav>
+    <div class="faq-container-icon">
+        <a href="faq.html" class="faq-link">
+             <img src="images/faq.png" alt="FAQ icon" class="faq-icon">
+        </a>
+    </div>
+
+
+  </header>
+  <!--! header section end  -->
+
+  <!--! Durak section start-->
+
+  <section class="durak">
+    <div class="sub-header">
+     
+      <p>Konumunuz: MERKEZ CAMİ | Yakınınızdaki duraklar listelenmektedir</p>
+      <img src="images/durak.png" alt="durak_logo">
+  </div>
+
+<div class="cards-container">
+    <!-- İlk Kart -->
+    <div class="card">
+        <h2>1123 KÜLTÜR DURAĞI</h2>
+        <img src="images/bus_p.png" alt="bus_logo"> 
+        <div class="info">
+            <div>Yaklaşan Araçlar</div>
+            <div>Süre</div>
+            <div>Doluluk</div>
+        </div>
+        <div class="info">
+            <div>3A</div>
+            <div>2 dk</div>
+            <div>%50</div>
+        </div>
+        <div class="info">
+            <div>15B</div>
+            <div>6 dk</div>
+            <div>%30</div>
+        </div>
+        <div class="info">
+            <div>42C</div>
+            <div>12 dk</div>
+            <div>%80</div>
+            
+        </div>
+        <div class="box-bottom">
+          <a href="stop_inf.html" class="btn"> <img src="images/stop_inf.png" alt="info_icon"></a>
+      </div>
+    </div>
+
+    <!-- İkinci Kart -->
+    <div class="card">
+        <h2>47 ZAFER DURAĞI</h2>
+        <img src="images/bus_p.png" alt="bus_logo"> <!-- Durak resminin yolunu buraya ekleyin -->
+        <div class="info">
+            <div>Yaklaşan Araçlar</div>
+            <div>Süre</div>
+            <div>Doluluk</div>
+        </div>
+        <div class="info">
+            <div>4C</div>
+            <div>5 dk</div>
+            <div>%60</div>
+        </div>
+        <div class="info">
+            <div>10A</div>
+            <div>8 dk</div>
+            <div>%70</div>
+        </div>
+        <div class="info">
+            <div>27D</div>
+            <div>14 dk</div>
+            <div>%40</div>
+        </div>
+        <div class="box-bottom">
+          <a href="stop_inf.html" class="btn"> <img src="images/stop_inf.png" alt="info_icon"></a>
+      </div>
+    </div>
+
+    <!-- Üçüncü Kart -->
+    <div class="card">
+        <h2>133 KONEVİ DURAĞI</h2>
+        <img src="images/bus_p.png" alt="bus_logo"> <!-- Durak resminin yolunu buraya ekleyin -->
+        <div class="info">
+            <div>Yaklaşan Araçlar</div>
+            <div>Süre</div>
+            <div>Doluluk</div>
+        </div>
+        <div class="info">
+            <div>2B</div>
+            <div>1 dk</div>
+            <div>%90</div>
+        </div>
+        <div class="info">
+            <div>8E</div>
+            <div>10 dk</div>
+            <div>%20</div>
+        </div>
+        <div class="info">
+            <div>13A</div>
+            <div>18 dk</div>
+            <div>%50</div>
+        </div>
+        <div class="box-bottom">
+          <a href="stop_inf.html" class="btn"> <img src="images/stop_inf.png" alt="info_icon"></a>
+      </div>
+
+    </div>
+
+    <div class="card">
+      <h2>120 BAŞAKÇI DURAĞI</h2>
+      <img src="images/bus_p.png" alt="bus_logo"> <!-- Durak resminin yolunu buraya ekleyin -->
+      <div class="info">
+          <div>Yaklaşan Araçlar</div>
+          <div>Süre</div>
+          <div>Doluluk</div>
+      </div>
+      <div class="info">
+          <div>2B</div>
+          <div>1 dk</div>
+          <div>%90</div>
+      </div>
+      <div class="info">
+          <div>8E</div>
+          <div>10 dk</div>
+          <div>%20</div>
+      </div>
+      <div class="info">
+          <div>13A</div>
+          <div>18 dk</div>
+          <div>%50</div>
+      </div>
+      <div class="box-bottom">
+        <a href="stop_inf.html" class="btn"> <img src="images/stop_inf.png" alt="info_icon"></a>
+    </div>
+
+  </div>
+</div>
+
+<div class="alt_m">
+  <img src="images/watermelon.png" alt="Logo" class="alt_m_logo">
+  Telif Hakkı Saklıdır © 2024
+</div>
+
+
+
+
+
+  </section>
+
+
+
+</body>
+
+</html>

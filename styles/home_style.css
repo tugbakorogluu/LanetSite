@@ -1,0 +1,295 @@
+/* Genel ayarlar */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: var(--header-height);
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--main-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header ayarları */
+.header {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border-bottom: var(--border-color);
+    height: var(--header-height);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo img {
+    height: 8vw; /* Dinamik boyut için vw kullanıldı */
+    max-height: 80px; /* Maksimum yükseklik sınırı */
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.header .navbar a {
+    margin: 0 1.5rem;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+/* İçerik bölümü */
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap; /* Daha küçük ekranlarda elemanların alt alta gelmesini sağlamak için eklendi */
+}
+
+.bus-stop img {
+    width: 100%; /* Dinamik genişlik ayarlandı */
+    max-width: 400px; /* Maksimum genişlik sınırı */
+    height: auto;
+}
+
+.bus-stop p {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 2rem; 
+}
+
+.rside2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 45%;
+    flex-grow: 1;
+    flex-basis: 45%;
+    max-height: 200%;
+}
+
+.frame {
+    position: relative;
+    width: 100%; /* Çerçevenin genişliği için esneklik sağlandı */
+    max-width: 700px; /* Maksimum genişlik sınırı */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-img {
+    width: 100%; /* Çerçevenin içeriği genişlik esnekliği */
+    height: auto;
+    display: block;
+}
+
+.content-inside-frame {
+    position: absolute;
+    top: 15%; 
+    left: 5%; 
+    right: 5%; 
+    bottom: 30%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f0f0; 
+    padding: 1rem; 
+    border-radius: 1rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    max-width: 90%; 
+    box-sizing: border-box; 
+}
+
+.content-inside-frame img.flag {
+    width: 10vw; /* Dinamik genişlik */
+    max-width: 40px; /* Maksimum genişlik sınırı */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.content-inside-frame h3 {
+    font-size: 2vw; /* Dinamik yazı boyutu */
+   
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.content-inside-frame p {
+    font-size: 1.5vw; /* Dinamik yazı boyutu */
+
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.content-inside-frame a.website-link {
+    font-size: 1.5vw; /* Dinamik yazı boyutu */
+
+    color: rgb(132, 143, 5);
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+/* Footer */
+.alt_m {
+    font-size: 1rem; 
+    position: fixed;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: black; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    text-align: center; 
+    padding: 10px 0;
+    box-sizing: border-box; 
+  
+    z-index: 1000;
+}
+
+.alt_m_logo {
+    width: 10vw; /* Dinamik genişlik */
+    max-width: 50px; /* Maksimum genişlik sınırı */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 1024px) {
+    .header .logo img {
+        height: 7vw; /* Küçük ekranlarda boyutu biraz küçült */
+    }
+
+    .content {
+        flex-direction: column; /* Küçük ekranlarda elemanları alt alta diz */
+        padding: 10px;
+    }
+
+    .bus-stop img {
+        max-width: 300px;
+    }
+
+    .rside2 {
+        max-width: 50%; /* Daha küçük ekranlarda esneklik sağla */
+    }
+
+    .frame {
+        width: 100%;
+    }
+
+    .content-inside-frame {
+        padding: 0.5rem;
+    }
+
+    .content-inside-frame h3 {
+        font-size: 2rem;
+    }
+
+    .content-inside-frame p,
+    .content-inside-frame a.website-link {
+        font-size: 1.5rem;
+    }
+
+    .alt_m_logo {
+        width: 8vw;
+        max-width: 40px;
+    }
+}
+
+@media screen and (max-width: 762px) {
+    .rside2 {
+        max-width: 80%; /* Daha küçük ekranlarda esneklik sağla */
+    }
+
+    .frame {
+        width: 100%;
+    }
+
+    .content-inside-frame {
+        padding: 0.5rem;
+    }
+
+    .content-inside-frame h3 {
+        font-size: 2rem;
+    }
+
+    .content-inside-frame p,
+    .content-inside-frame a.website-link {
+        font-size: 1.5rem;
+    }
+
+    .alt_m_logo {
+        width: 8vw;
+        max-width: 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .rside2 {
+        max-width: 100%; /* Daha küçük ekranlarda esneklik sağla */
+    }
+
+    .frame {
+        width: 100%;
+    }
+
+    .content-inside-frame {
+        padding: 0.5rem;
+    }
+
+    .content-inside-frame h3 {
+        font-size: 2rem;
+    }
+
+    .content-inside-frame p,
+    .content-inside-frame a.website-link {
+        font-size: 1.5rem;
+    }
+
+    .alt_m_logo {
+        width: 8vw;
+        max-width: 40px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .rside2 {
+        max-width: 100%; /* Daha küçük ekranlarda esneklik sağla */
+    }
+
+    .frame {
+        width: 100%;
+    }
+
+    .content-inside-frame {
+        padding: 0.5rem;
+    }
+
+    .content-inside-frame h3 {
+        font-size: 2rem;
+    }
+
+    .content-inside-frame p,
+    .content-inside-frame a.website-link {
+        font-size: 1.5rem;
+    }
+
+    .alt_m_logo {
+        width: 8vw;
+        max-width: 40px;
+    }
+}

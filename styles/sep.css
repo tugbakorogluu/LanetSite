@@ -1,0 +1,30 @@
+.home .main .content h3{
+    font-size: 30px;
+}
+
+.home .main .content img{
+    width: 70%;
+    object-fit: cover;
+}
+
+
+.home .main .r_side{
+
+    padding: 3rem;
+
+    border-radius: 3rem;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+
+.home .main .r_side img{
+    
+    width: 100%;
+    object-fit: cover;
+}
