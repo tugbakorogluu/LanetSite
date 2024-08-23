@@ -3,6 +3,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   padding: 200px;
+  margin-top: 50px;
 }
 
 .box {
@@ -59,13 +60,13 @@
 }
 
 .right-content {
-  flex: 2;
+  flex: 5px;
   max-width: 70%;
 }
 
 .map-container {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 450px;
 }
 
@@ -73,7 +74,7 @@
   position: absolute;
   top: 0;
   left: 150px;
-  width: 300%; /* 16 inç ve üzeri ekranlarda genişliği sabit */
+  width: 300%; 
   background-color: black;
   color: white;
   font-size: 18px;
@@ -87,36 +88,12 @@ iframe {
   position: absolute;
   top: 0;
   left: 150px;
-  width: 300%; /* 16 inç ve üzeri ekranlarda genişliği sabit */
-  height: 130%; /* 16 inç ve üzeri ekranlarda yüksekliği sabit */
+  width: 300%; 
+  height: 130%; 
   z-index: 1;
 }
 
-.alt_m {
-font-size: 1rem;
-position: fixed;
-bottom: 0;
-left: 50%;
-transform: translateX(-50%);
-color: black;
-border-radius: 5px;
-font-weight: bold;
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
-text-align: center;
-padding: 10px 0;
-box-sizing: border-box;
-z-index: 1000;
-}
 
-.alt_m_logo {
-width: 10vw; /* Dinamik genişlik */
-max-width: 50px; /* Maksimum genişlik sınırı */
-height: auto;
-margin-right: 10px;
-}
 
 /* Responsive Design for screens smaller than 16 inches (1024px and below) */
 @media screen and (max-width: 1024px) {

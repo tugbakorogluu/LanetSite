@@ -27,8 +27,8 @@ html {
     overflow-x: hidden;
     scroll-padding-top: var(--header-height);
     scroll-behavior: smooth;
-        transform: scale(1); /* Ölçeklendirme olmaması için varsayılan */
-    transform-origin: top left; /* Üstten başlar */
+    transform: scale(1); 
+    transform-origin: top left; 
 }
 
 body {
@@ -126,50 +126,51 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0rem;
-     padding: 5rem;
+    padding: 1rem;
     padding-left: 15rem;
-    padding-right: 15rem; /* Sağ ve sol boşluk için padding ekledim */
+    padding-right: 15rem; 
+    grid-template-columns: repeat(3, 1fr);
    
 }
 
 .durak .box {
-    position: relative; /* Corner image'ler için referans noktası oluşturur */
+    position: relative; 
     background-color: var(--box-bg-color);
     color: var(--box-text-color);
     padding: 4rem;
     border-radius: var(--box-radius);
     box-shadow: var(--box-shadow);
     text-align: center;
-    height: 350px;
+    height: 400px;
     width: 90%; 
+    margin-top: 50px
+    
     
   
  /* Set a fixed height, adjust as needed */
 }
 
 .durak .box img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin-bottom: 1rem;
 }
 
-/* Corner Images */
 .durak .box .corner-image {
-    position: absolute;
-    width: 40px; /* Adjust the size as needed */
+    width: 40px; /* Boyutu ayarlayın */
     height: 30px;
-    z-index: 1; /* Üstte görünmelerini sağlar */
+    margin-top: auto; /* Corner image'i kutunun altına yerleştirir */
+    align-self: center; 
+    margin-top: 20px/* Görseli kutunun ortasında yatay olarak ortalar */
 }
+
 
 .durak .box .corner-image.top-left {
     bottom: 10px; /* Alt konumunu ayarlayın */
     left: 10px; /* Sol konumunu ayarlayın */
 }
 
-.durak .box .corner-image.top-right {
-    bottom: 10px; /* Alt konumunu ayarlayın */
-    right: 10px; /* Sağ konumunu ayarlayın */
-}
+
 
 
 
@@ -190,32 +191,6 @@ section {
 
 
 
-.alt_m {
-    font-size: 1rem;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    color: black;
-    border-radius: 5px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    box-sizing: border-box;
-
-    z-index: 1000;
-}
-
-.alt_m_logo {
-    width: 10vw; /* Dinamik genişlik */
-    max-width: 50px; /* Maksimum genişlik sınırı */
-    height: auto;
-    margin-right: 10px;
-}
 
 
 
