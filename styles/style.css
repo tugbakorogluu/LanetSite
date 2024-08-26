@@ -124,7 +124,6 @@ section {
 
 .durak .box-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 0rem;
     padding: 1rem;
     padding-left: 15rem;

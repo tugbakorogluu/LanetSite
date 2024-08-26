@@ -36,10 +36,12 @@ body {
 /* Cards Container */
 .cards-container {
     display: flex;
-    justify-content: center;
-    padding: 20px;
-    gap: 20px;
+    padding: 50px;
+    padding-left: 1px;
+    gap: 40px;
     flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+   
 }
 
 /* Individual Cards */
@@ -49,10 +51,11 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
-    max-width: 250px;
+    max-width: 1000px;
     padding: 15px;
     flex: 1 1 250px;
-    box-sizing: border-box;
+   
+   
 }
 
 .card img {
@@ -114,6 +117,10 @@ footer {
     .cards-container {
         max-width: 1200px;
         margin: 0 auto;
+        .card {
+            flex: 1 1 30%; /* Üç kartın yan yana görünmesi için genişlik ayarı */
+            max-width: 30%;
+        }
     }
 }
 
